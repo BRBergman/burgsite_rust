@@ -7,33 +7,20 @@ pub use switcher::*;
 //https://yew.rs/docs/getting-started/build-a-sample-app
 
 
-
-#[function_component(BlahajGallery)]
+#[function_component(BlahajGalleryPage)]
 fn blahaj_gallery() -> Html {
-
     html! {
-    
-
-<html>
-
-<head>
-  <title>{"The Blahaj Gallery"}</title>
-  //<link rel="icon" href="https://burgburg.net/Blah/blahajIcon.png">
-  <style />
-</head>
-
-<body style="background: #f5acba; text-align: center;">
-  <div style="padding: 30px; text-align: left">
-    <a style="color: #60d0fa; text-shadow: 3px 3px 5px black" href="/">{"return..."}</a>
-  </div>
-  <img src="https://burgburg.net/BlahajGallery/Blah1.JPG" />
-  <img src="https://burgburg.net/BlahajGallery/Blah4.JPG" />
-  <img src="https://burgburg.net/BlahajGallery/Blah5.jpg" />
-  <img src="https://burgburg.net/BlahajGallery/Blah2.JPG" style="width: 45%" />
-  <img src="https://burgburg.net/BlahajGallery/Blah3.JPG" style="width: 45%" />
-</body> 
-</html>
-}
+    <div style="background: #f5acba; text-align: center; margin: 0px">
+      <div style="padding: 30px; text-align: left; background: #bbd8bb;">
+       <div ><TabSwitcher/></div>
+      </div>
+      <img src="https://burgburg.net/BlahajGallery/Blah1.JPG" style="width: 30%;"/>
+      <img src="https://burgburg.net/BlahajGallery/Blah4.JPG" style="width: 30%;"/>
+      <img src="https://burgburg.net/BlahajGallery/Blah5.jpg" style="width: 30%;"/>
+      <img src="https://burgburg.net/BlahajGallery/Blah2.JPG" style="width: 45%" />
+      <img src="https://burgburg.net/BlahajGallery/Blah3.JPG" style="width: 45%" />
+    </div>
+    }
 }
 
 #[function_component()]
@@ -47,11 +34,11 @@ fn App() -> Html {
 
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => html! { 
-         <Home />
+        Route::Home => html! {
+         <HomePage />
         },
         Route::BlahajGallery => html! {
-            <BlahajGallery />
+            <BlahajGalleryPage />
         },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
         Route::BurgBlog => html! {
@@ -60,8 +47,6 @@ fn switch(routes: Route) -> Html {
     }
 }
 
-
-    
 fn main() {
     yew::Renderer::<App>::new().render();
 }

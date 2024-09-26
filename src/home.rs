@@ -1,6 +1,7 @@
 use super::switcher::TabSwitcher;
 use yew::prelude::*;
-#[function_component(Home)]
+
+#[function_component(HomePage)]
 pub fn home() -> Html {
     html! {
         <body>
@@ -97,7 +98,7 @@ pub fn home() -> Html {
                     <h3>
                         {"QOTR (quote of the refresh):"}
                     </h3>
-                    <p id="qotd"></p>
+                    <p ><QOTR/></p>
                 </div>
 
 
@@ -184,4 +185,13 @@ pub fn home() -> Html {
         <script src="/index.js"></script>
     </body>
     }
+}
+use rand::Rng;
+
+#[function_component(QOTR)]
+fn qotr()-> Html
+{
+    let file: Vec<&str> = vec!["bwaaa", "DO NOT THROW SOULS", "you're out of touch","haiii"];
+    let rand = rand::thread_rng().gen_range(0..file.len());
+    return Html::from(file[rand]);
 }

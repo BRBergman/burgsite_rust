@@ -7,3 +7,4 @@ edition = "2021"
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 stylist = {version = "0.13.0", features = ["yew", "parser"] }
 yew-router = { git = "https://github.com/yewstack/yew.git" }
+rand = "0.8.5"
