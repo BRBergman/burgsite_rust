@@ -1,0 +1,80 @@
+html {
+  overflow:visible;
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 1px 1px 2px #617161;
+  scrollbar-width: none;
+}
+Body {
+  margin: 0%;
+  background-image: url("https://burgburg.net/bkg2.png");
+  background-size: 160px;
+  image-rendering: pixelated;
+}
+Body div {
+  image-rendering: auto;
+}
+p {
+  padding-left: 8%;
+  color: #212136;
+  margin-top: auto;
+}
+h3 {
+  padding-left: 2%;
+  color: #212136;
+  margin-bottom: auto;
+  padding-bottom: 9px;
+}
+h1 {
+  padding-left: 2%;
+  color: #212136;
+  margin-bottom: auto;
+}
+
+.main {
+  margin-top: 30px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.outerboxes {
+  width: 100%;
+  padding: 5px;
+  padding-top: 2px ;
+}
+.innerboxes {
+  justify-content: space-between;
+  border: 3px solid #44415a;
+  padding: 6px;
+  background-color: #bbd8bb;
+}
+
+.inbetween {
+  padding: 5px;
+}
+a{
+  color: #2b6882;
+}
+a:link {
+  color: #2b6882;
+  text-decoration: none;
+}
+a:visited {
+  color: #1f4a5c;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.heading{
+  padding: 10px;
+  margin-top: 35px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 200%;
+  color: #212136;
+  text-decoration: underline;
+}
