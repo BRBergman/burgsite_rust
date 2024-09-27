@@ -2,9 +2,9 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 #[derive(Debug, Clone, Copy, PartialEq, Routable)]
 pub enum Route {
+    #[not_found]
     #[at("/")]
     Home,
-    #[not_found]
     #[at("/404")]
     NotFound,
     #[at("/BlahajGallery")]
