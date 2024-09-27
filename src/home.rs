@@ -4,7 +4,7 @@ use yew::prelude::*;
 #[function_component(HomePage)]
 pub fn home() -> Html {
     html! {
-        <body>
+    <div>
         <h1 class="heading">{"burgburg.net"}</h1>
         <div class="main">
             <div class="outerboxes">
@@ -183,7 +183,7 @@ pub fn home() -> Html {
         </p>
         <script src="/htmx/htmx.min.js"></script>
         <script src="/index.js"></script>
-    </body>
+        </div>
     }
 }
 use rand::Rng;
@@ -191,7 +191,7 @@ use rand::Rng;
 #[function_component(QOTR)]
 fn qotr()-> Html
 {
-    let file: Vec<&str> = vec!["bwaaa", "DO NOT THROW SOULS", "you're out of touch","haiii"];
+    let file = vec!["bwaaa", "DO NOT THROW SOULS", "you're out of touch","haiii"];
     let rand = rand::thread_rng().gen_range(0..file.len());
     return Html::from(file[rand]);
 }
